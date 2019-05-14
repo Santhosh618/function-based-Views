@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Emp data Page</title>
+  </head>
+  <body>
+    <h1>Here We Can get Employee data from Database table:</h1><hr>
+    {% if form %}
+    <table border='3px'>
+      <thead>
+        <th>ENAME</th>
+        <th>EID</th>
+        <th>ESALARY</th>
+        <th>EADD</th>
+        <th>Action</th>
+      </thead>
+      {% for data in form %}
+      <tr>
+        <td>{{data.ename}}</td>
+        <td>{{data.eid}}</td>
+        <td>{{data.esalary}}</td>
+        <td>{{data.eadd}}</td>
+        <td><a href="#">Update</a> &nbsp &nbsp<a href="/delete/{{data.id}}">Delete</a>
+</td>
+
+      </tr>
+      {% endfor %}
+
+    </table>
+    {% else %}
+    <h1>No records are Found</h1>
+    {% endif %}
+  </body>
+</html>

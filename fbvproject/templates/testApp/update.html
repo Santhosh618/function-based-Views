@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>update Page</title>
+  </head>
+  <body>
+    <h1>HERE UPDATED RESULTS:</h1>
+
+    <form  method="post">
+      NAME:<input type="text" name="ename" value="{{emp.ename}}">
+      ID:<input type="text" name="eid" value="{{emp.eid}}">
+      Salary:<input type="text" name="esalary" value="{{emp.esalary}}">
+      ADD:<input type="text" name="eadd" value="{{emp.eadd}}">
+      <input type="submit" name="" value="Update records">
+      {{emp.as_p}}
+      {% csrf_token %}
+    </form>
+
+
+
+  </body>
+</html>
